@@ -1,371 +1,736 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="王地瓜">
-  <meta name="keywords" content="">
-  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Sweet Potato">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Sweet Potato">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="王地瓜">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  
-  <title>Sweet Potato</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 100vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Sweet Potato</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="Welcome to my static blog website🤩"></span>
-          
-        </div>
-
-        
-      </div>
-
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/08/27/ad/" target="_self">
-          项目定制(广告)
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/27/ad/" target="_self">
-        <div>
-          如果您有后台管理系统项目需求，且不是很想自己开发。那么，找我们定制项目是您最好的选择! 项目定制我们团队可以根据您的需求，为您定制一个符合您要求的项目。比如要能实现权限管理，要能实现数据权限，要能实现多租户等等。只要您能描述清楚，我们一定会为您定制一个符合您要求的项目。 一、我们着手的项目类型 后台管理系统 前端框架 其他  二、产品优势 快速开发 稳定可靠 根据需求开发，而不是市面上一找一大把的
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-08-27 17:28" pubdate>
-              2024-08-27
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%AE%9A%E5%88%B6/">#管理系统定制</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
-
-
-
-              </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毕业设计全套服务价目表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4D4F',
+                        secondary: '#FF7A45',
+                        success: '#52C41A',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .card-shadow {
+                box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+            }
+            .price-badge {
+                clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+            }
+            .free-badge {
+                clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+            }
+            .case-tag {
+                transition: all 0.2s ease;
+            }
+            .case-tag.active {
+                background-color: #FF4D4F;
+                color: white;
+            }
+            .case-overlay {
+                background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .case-card:hover .case-overlay {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gradient-to-b from-light to-gray-100 min-h-screen">
+    <!-- 顶部导航 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-graduation-cap text-primary text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-bold text-dark">毕业无忧<span class="text-primary">服务站</span></h1>
             </div>
-          </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">首页</a>
+                <a href="#" class="text-primary font-medium border-b-2 border-primary pb-1">服务价目</a>
+                <a href="#cases" class="text-gray-600 hover:text-primary transition-colors">案例展示</a>
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">关于我们</a>
+            </div>
+            <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full flex items-center space-x-2 transition-colors">
+                <i class="fa fa-shopping-cart"></i>
+                <span>立即咨询</span>
+            </button>
         </div>
-      </div>
-    
+    </nav>
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+    <!-- 英雄区 -->
+    <section class="container mx-auto px-4 py-12 md:py-20 text-center">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-dark mb-4">毕业设计全套服务</h2>
+        <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-10">专业团队护航，覆盖从开题到答辩全流程，让你轻松毕业无压力</p>
+        <div class="inline-flex items-center bg-primary/10 text-primary px-6 py-2 rounded-full">
+            <i class="fa fa-bolt mr-2"></i>
+            <span>限时优惠 · 全程一对一指导</span>
         </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-    
+    <!-- 价目表卡片区 -->
+    <section class="container mx-auto px-4 py-8 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+            
+            <!-- 开题报告 -->
+            <div class="bg-white rounded-2xl overflow-hidden card-shadow card-hover">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/180/600/300" alt="开题报告服务" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 price-badge bg-primary text-white px-4 py-1 font-bold text-lg">
+                        ¥200
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                            <i class="fa fa-file-text-o text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">开题报告</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">专业框架设计、研究方向指导、文献综述撰写，通过率高达99%</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="text-gray-600 ml-1">5.0</span>
+                        </div>
+                        <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors">
+                            立即选购
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-    
-  </main>
+            <!-- 系统开发 -->
+            <div class="bg-white rounded-2xl overflow-hidden card-shadow card-hover border-2 border-primary relative">
+                <div class="absolute top-0 left-0 w-full bg-primary text-white text-center py-1 text-sm font-medium">
+                    热门推荐
+                </div>
+                <div class="relative pt-4">
+                    <img src="https://picsum.photos/id/0/600/300" alt="系统开发服务" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 price-badge bg-secondary text-white px-4 py-1 font-bold text-lg">
+                        ¥480
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center mr-3">
+                            <i class="fa fa-code text-secondary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">系统开发</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">定制化系统开发、代码编写优化、功能测试调试，支持多种开发语言</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span class="text-gray-600 ml-1">4.9</span>
+                        </div>
+                        <button class="bg-secondary hover:bg-secondary/90 text-white px-4 py-2 rounded-lg transition-colors">
+                            立即选购
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       Hexo <i class="iconfont icon-love"></i> Fluid 
-    </div>
-  
-  
-  
-</div>
+            <!-- 系统部署 -->
+            <div class="bg-white rounded-2xl overflow-hidden card-shadow card-hover">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/20/600/300" alt="系统部署服务" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 free-badge bg-success text-white px-4 py-1 font-bold text-lg">
+                        免费
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center mr-3">
+                            <i class="fa fa-cloud-upload text-success"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">系统部署</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">服务器配置、环境搭建、系统部署上线、运行维护指导，全程免费</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="text-gray-600 ml-1">5.0</span>
+                        </div>
+                        <button class="bg-success hover:bg-success/90 text-white px-4 py-2 rounded-lg transition-colors">
+                            免费获取
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-  </footer>
+            <!-- 论文撰写 -->
+            <div class="bg-white rounded-2xl overflow-hidden card-shadow card-hover">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/48/600/300" alt="论文撰写服务" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 price-badge bg-primary text-white px-4 py-1 font-bold text-lg">
+                        ¥900
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                            <i class="fa fa-book text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">论文撰写</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">完整论文撰写、逻辑结构优化、专业术语规范、格式排版统一</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="text-gray-600 ml-1">4.8</span>
+                        </div>
+                        <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors">
+                            立即选购
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+            <!-- 论文查重与降重 -->
+            <div class="bg-white rounded-2xl overflow-hidden card-shadow card-hover">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/60/600/300" alt="论文查重与降重服务" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 free-badge bg-success text-white px-4 py-1 font-bold text-lg">
+                        免费
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center mr-3">
+                            <i class="fa fa-search text-success"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">论文查重与降重</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">免费知网查重、相似度修改、语句润色、原创性保障，达标为止</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span class="text-gray-600 ml-1">4.9</span>
+                        </div>
+                        <button class="bg-success hover:bg-success/90 text-white px-4 py-2 rounded-lg transition-colors">
+                            免费获取
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
+            <!-- 论文降AICG -->
+            <div class="bg-white rounded-2xl overflow-hidden card-shadow card-hover">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/26/600/300" alt="论文降AICG服务" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 free-badge bg-success text-white px-4 py-1 font-bold text-lg">
+                        免费
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center mr-3">
+                            <i class="fa fa-shield text-success"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">论文降AICG</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">AI内容检测、人工改写优化、原创度提升，规避学术风险</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="text-gray-600 ml-1">5.0</span>
+                        </div>
+                        <button class="bg-success hover:bg-success/90 text-white px-4 py-2 rounded-lg transition-colors">
+                            免费获取
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 答辩相关教学 -->
+            <div class="bg-white rounded-2xl overflow-hidden card-shadow card-hover md:col-span-2 lg:col-span-1 xl:col-span-1">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1005/600/300" alt="答辩相关教学服务" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 free-badge bg-success text-white px-4 py-1 font-bold text-lg">
+                        免费
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center mr-3">
+                            <i class="fa fa-microphone text-success"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">答辩相关教学</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">答辩PPT制作指导、答辩技巧培训、常见问题模拟、现场应对策略</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span class="text-gray-600 ml-1">4.9</span>
+                        </div>
+                        <button class="bg-success hover:bg-success/90 text-white px-4 py-2 rounded-lg transition-colors">
+                            免费获取
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+    <!-- 案例展示区 -->
+    <section id="cases" class="container mx-auto px-4 py-16 bg-white rounded-3xl my-12 card-shadow">
+        <div class="text-center mb-12">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">成功案例展示</h2>
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto">我们已帮助上千名学子顺利毕业，以下是部分优秀毕业设计案例</p>
+        </div>
 
+        <!-- 案例分类筛选 -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <button class="case-tag active px-5 py-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors" data-category="all">
+                全部案例
+            </button>
+            <button class="case-tag px-5 py-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors" data-category="website">
+                网站开发
+            </button>
+            <button class="case-tag px-5 py-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors" data-category="app">
+                应用程序
+            </button>
+            <button class="case-tag px-5 py-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors" data-category="system">
+                管理系统
+            </button>
+            <button class="case-tag px-5 py-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-colors" data-category="thesis">
+                论文作品
+            </button>
+        </div>
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
+        <!-- 案例卡片网格 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- 案例1 -->
+            <div class="case-card card-hover group" data-category="website">
+                <div class="relative rounded-2xl overflow-hidden h-64">
+                    <img src="https://picsum.photos/id/160/800/600" alt="校园二手交易平台" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="case-overlay absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">校园二手交易平台</h3>
+                            <span class="bg-primary/80 text-white text-sm px-2 py-1 rounded">网站开发</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-b-2xl">
+                    <p class="text-gray-600 text-sm mb-3">基于Vue+SpringBoot开发，实现商品发布、交易、评价等功能</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500 text-sm">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="text-gray-500 ml-1">5.0</span>
+                        </div>
+                        <button class="text-primary text-sm hover:text-primary/80 transition-colors">
+                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 案例2 -->
+            <div class="case-card card-hover group" data-category="system">
+                <div class="relative rounded-2xl overflow-hidden h-64">
+                    <img src="https://picsum.photos/id/48/800/600" alt="学生成绩管理系统" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="case-overlay absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">学生成绩管理系统</h3>
+                            <span class="bg-primary/80 text-white text-sm px-2 py-1 rounded">管理系统</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-b-2xl">
+                    <p class="text-gray-600 text-sm mb-3">基于Java+MySQL开发，支持成绩录入、统计分析、报表导出</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500 text-sm">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span class="text-gray-500 ml-1">4.8</span>
+                        </div>
+                        <button class="text-primary text-sm hover:text-primary/80 transition-colors">
+                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 案例3 -->
+            <div class="case-card card-hover group" data-category="thesis">
+                <div class="relative rounded-2xl overflow-hidden h-64">
+                    <img src="https://picsum.photos/id/24/800/600" alt="基于机器学习的图像识别研究" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="case-overlay absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">图像识别算法研究</h3>
+                            <span class="bg-primary/80 text-white text-sm px-2 py-1 rounded">论文作品</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-b-2xl">
+                    <p class="text-gray-600 text-sm mb-3">基于CNN的图像分类研究，包含完整实验数据和算法优化</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500 text-sm">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="text-gray-500 ml-1">5.0</span>
+                        </div>
+                        <button class="text-primary text-sm hover:text-primary/80 transition-colors">
+                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 案例4 -->
+            <div class="case-card card-hover group" data-category="app">
+                <div class="relative rounded-2xl overflow-hidden h-64">
+                    <img src="https://picsum.photos/id/96/800/600" alt="健康饮食推荐APP" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="case-overlay absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">健康饮食推荐APP</h3>
+                            <span class="bg-primary/80 text-white text-sm px-2 py-1 rounded">应用程序</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-b-2xl">
+                    <p class="text-gray-600 text-sm mb-3">基于Flutter开发跨平台应用，支持饮食记录、营养分析</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500 text-sm">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="text-gray-500 ml-1">4.7</span>
+                        </div>
+                        <button class="text-primary text-sm hover:text-primary/80 transition-colors">
+                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
+            <!-- 案例5 -->
+            <div class="case-card card-hover group" data-category="system">
+                <div class="relative rounded-2xl overflow-hidden h-64">
+                    <img src="https://picsum.photos/id/201/800/600" alt="图书管理系统" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="case-overlay absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">智能图书管理系统</h3>
+                            <span class="bg-primary/80 text-white text-sm px-2 py-1 rounded">管理系统</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-b-2xl">
+                    <p class="text-gray-600 text-sm mb-3">基于Python+Django开发，实现图书借阅、归还、预约功能</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500 text-sm">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span class="text-gray-500 ml-1">4.9</span>
+                        </div>
+                        <button class="text-primary text-sm hover:text-primary/80 transition-colors">
+                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 案例6 -->
+            <div class="case-card card-hover group" data-category="website">
+                <div class="relative rounded-2xl overflow-hidden h-64">
+                    <img src="https://picsum.photos/id/119/800/600" alt="个人博客系统" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="case-overlay absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">个人技术博客系统</h3>
+                            <span class="bg-primary/80 text-white text-sm px-2 py-1 rounded">网站开发</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-b-2xl">
+                    <p class="text-gray-600 text-sm mb-3">基于React+Node.js开发，支持文章发布、评论、分类标签</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500 text-sm">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="text-gray-500 ml-1">4.6</span>
+                        </div>
+                        <button class="text-primary text-sm hover:text-primary/80 transition-colors">
+                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 案例7 -->
+            <div class="case-card card-hover group" data-category="thesis">
+                <div class="relative rounded-2xl overflow-hidden h-64">
+                    <img src="https://picsum.photos/id/42/800/600" alt="大数据分析在电商中的应用" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="case-overlay absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">电商数据分析研究</h3>
+                            <span class="bg-primary/80 text-white text-sm px-2 py-1 rounded">论文作品</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-b-2xl">
+                    <p class="text-gray-600 text-sm mb-3">基于Hadoop的电商用户行为分析，包含数据可视化展示</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500 text-sm">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="text-gray-500 ml-1">5.0</span>
+                        </div>
+                        <button class="text-primary text-sm hover:text-primary/80 transition-colors">
+                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 案例8 -->
+            <div class="case-card card-hover group" data-category="app">
+                <div class="relative rounded-2xl overflow-hidden h-64">
+                    <img src="https://picsum.photos/id/237/800/600" alt="宠物健康管理APP" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="case-overlay absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">宠物健康管理APP</h3>
+                            <span class="bg-primary/80 text-white text-sm px-2 py-1 rounded">应用程序</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white rounded-b-2xl">
+                    <p class="text-gray-600 text-sm mb-3">基于React Native开发，支持疫苗提醒、健康记录、宠物社区</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-500 text-sm">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span class="text-gray-500 ml-1">4.8</span>
+                        </div>
+                        <button class="text-primary text-sm hover:text-primary/80 transition-colors">
+                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <script  src="/js/local-search.js" ></script>
+        <!-- 查看更多按钮 -->
+        <div class="text-center mt-12">
+            <button class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-medium transition-colors">
+                查看更多案例 <i class="fa fa-refresh ml-2"></i>
+            </button>
+        </div>
+    </section>
 
+    <!-- 底部咨询区 -->
+    <section class="container mx-auto px-4 py-16 text-center">
+        <div class="max-w-4xl mx-auto bg-gradient-to-r from-primary/90 to-secondary/90 rounded-3xl p-8 md:p-12 card-shadow">
+            <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold text-white mb-4">还在为毕业设计发愁？</h2>
+            <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">立即咨询我们，获取专属毕业设计解决方案，全程保驾护航</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-full font-medium transition-colors flex items-center justify-center">
+                    <i class="fa fa-comments mr-2"></i> 在线咨询
+                </button>
+                <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-full font-medium transition-colors flex items-center justify-center">
+                    <i class="fa fa-phone mr-2"></i> 电话联系
+                </button>
+            </div>
+        </div>
+    </section>
 
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fa fa-graduation-cap text-primary text-2xl"></i>
+                        <h3 class="text-xl font-bold">毕业无忧<span class="text-primary">服务站</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">专业毕业设计服务平台，让每位学子都能轻松毕业</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-qq"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">服务价目</a></li>
+                        <li><a href="#cases" class="text-gray-400 hover:text-primary transition-colors">案例展示</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">关于我们</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">常见问题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">服务项目</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">开题报告</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">系统开发</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">论文撰写</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">查重降重</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">答辩指导</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">北京市海淀区中关村大街1号</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">400-123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">service@bywy.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-primary mr-3"></i>
+                            <span class="text-gray-400">9:00-22:00 全天在线</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2025 毕业无忧服务站 版权所有 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- 案例筛选JS -->
+    <script>
+        // 案例分类筛选功能
+        const caseTags = document.querySelectorAll('.case-tag');
+        const caseCards = document.querySelectorAll('.case-card');
 
+        caseTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                // 移除所有标签的active类
+                caseTags.forEach(t => t.classList.remove('active'));
+                // 给当前标签添加active类
+                tag.classList.add('active');
 
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+                const category = tag.getAttribute('data-category');
 
+                // 筛选案例卡片
+                caseCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        // 添加淡入动画
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        // 添加淡出动画
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
 
-  
+        // 初始化案例卡片样式
+        caseCards.forEach(card => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        });
 
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
